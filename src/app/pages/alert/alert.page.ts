@@ -31,7 +31,20 @@ export class AlertPage implements OnInit {
       header: 'Alert',
       subHeader: 'Subtitle',
       message: 'This is an alert message.',
-      buttons: ['Cancel', 'Open Modal', 'Delete'],
+      buttons: [{
+        text:'Ok!',
+        handler:() => {
+          console.log('Click en ok!')
+          }
+        },
+        {
+        text:'Cancelar',
+        role: 'cancel',
+        cssClass:'rojo'
+        // handler:() => {
+        //   console.log('Click en cancelar!')
+        //   }
+       }],
     });
 
     await alert.present();
