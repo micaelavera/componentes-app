@@ -12,8 +12,8 @@
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime [value]="fechaNacimiento.toISOString()" id="datetime" #popoverDatetime presentation="date"
-            display-format="DD MM YYYY" (ionChange)="cambiarFecha( $event )">
+          <ion-datetime show-default-buttons [value]="fechaNacimiento.toISOString()" id="datetime" #popoverDatetime
+            presentation="date" (ionChange)="cambiarFecha( $event )">
           </ion-datetime>
         </ng-template>
       </ion-modal>
@@ -30,7 +30,8 @@
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime id="datetimeRestriciones" #popoverDatetime presentation="date" display-format="DD MM YYYY" min="2015-01-01" max="2025-12-31"></ion-datetime>
+          <ion-datetime show-default-buttons id="datetimeRestriciones" #popoverDatetime presentation="date"
+            min="2015-01-01" max="2025-12-31"></ion-datetime>
         </ng-template>
       </ion-modal>
     </ion-item>
@@ -41,7 +42,20 @@
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime id="datetimeYearRestriciones" #popoverDatetime presentation="year" display-format="DD MM YYYY" min="2015" max="2025"></ion-datetime>
+          <ion-datetime show-default-buttons id="datetimeYearRestriciones" #popoverDatetime presentation="year"
+            min="2015" max="2025"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custom options</ion-label>
+      <ion-datetime-button datetime="datetimeCustomOptions"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime show-default-buttons slot="buttons" id="datetimeCustomOptions"
+            #popoverDatetime presentation="date"></ion-datetime>
         </ng-template>
       </ion-modal>
     </ion-item>
