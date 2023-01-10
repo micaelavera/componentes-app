@@ -4,6 +4,15 @@
       <ion-back-button defaultHref="/" color="primary"></ion-back-button>
     </ion-buttons>
     <ion-title color="primary">Buttons</ion-title>
+
+    <!-- END TOOLBAR -->
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()" color="danger">
+        <ion-icon slot="icon-only" 
+                  [name]=" favorito ? 'heart' : 'heart-outline'">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
