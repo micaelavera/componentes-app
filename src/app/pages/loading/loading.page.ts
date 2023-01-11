@@ -12,4 +12,9 @@ export class LoadingPage implements OnInit {
   ngOnInit() {
   }
 
+
+  mostrarLoading(){
+    
+  }
+
 }
