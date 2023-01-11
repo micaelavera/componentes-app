@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ListReorderPage implements OnInit {
 
   personajes : string[] = ['Aquaman', 'Superman','Batman','Mujer Maravilla', 'Flash'];
+  // Crear propiedad booleana
+ reorderDisabled: boolean = true;
+
+
   constructor() { }
 
   ngOnInit() {
@@ -22,5 +26,4 @@ export class ListReorderPage implements OnInit {
 
     console.log(this.personajes);
   }
-
 }
