@@ -80,7 +80,7 @@ export class InicioPage implements OnInit {
     },
     {
       icon: 'refresh-circle-outline',
-      name: 'Loading - Reorder',
+      name: 'Loading',
       redirectTo:'/loading'
     }
   ]
