@@ -1,9 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>segment</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Segment"></app-header>
 
 <ion-content>
-
+<ion-segment value="pasta" (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="todos">
+    <ion-label>Todos</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="DC Comics">
+    <ion-label>DC Comics</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="Marvel Comics">
+    <ion-label>Marvel Comics</ion-label>
+  </ion-segment-button>
+</ion-segment>
 </ion-content>
