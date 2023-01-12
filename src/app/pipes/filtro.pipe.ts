@@ -23,7 +23,7 @@ export class FiltroPipe implements PipeTransform {
     //console.log(texto);
 
     return arreglo.filter(
-      item => item.title.toLowerCase().includes(texto)
+      item => item[columna].toLowerCase().includes(texto)
     );
   }
 
