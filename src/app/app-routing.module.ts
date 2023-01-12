@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
@@ -100,7 +100,6 @@ const routes: Routes = [
     path: 'slides',
     loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
   }
-
 ];
 
 @NgModule({

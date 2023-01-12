@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-slides',
@@ -30,13 +31,13 @@ export class SlidesPage implements OnInit {
     }
   ];
   
-  constructor() { }
+  constructor(private navController : NavController) { }
 
   ngOnInit() {
   }
 
   onClick(){
-    
+    this.navController.navigateBack('/');
   }
 
 }
