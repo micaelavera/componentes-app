@@ -12,4 +12,7 @@ export class SearchPage implements OnInit {
   ngOnInit() {
   }
 
+  onSearchChange( event:any ){
+    console.log(event)
+  }
 }
