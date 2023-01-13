@@ -1,0 +1,63 @@
+<app-header titulo="dateTime"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Datos de nacimiento</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime show-default-buttons [value]="fechaNacimiento.toISOString()" id="datetime" #popoverDatetime
+            presentation="date" (ionChange)="cambiarFecha( $event )">
+          </ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Mínimo y máximo</ion-label>
+      <ion-datetime-button datetime="datetimeRestriciones"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime show-default-buttons id="datetimeRestriciones" #popoverDatetime presentation="date"
+            min="2015-01-01" max="2025-12-31"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-datetime-button datetime="datetimeYearRestriciones"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime show-default-buttons id="datetimeYearRestriciones" #popoverDatetime presentation="year"
+            min="2015" max="2025"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custom options</ion-label>
+      <ion-datetime-button datetime="datetimeCustomOptions"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime show-default-buttons slot="buttons" id="datetimeCustomOptions"
+            #popoverDatetime presentation="date"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+  </ion-list>
+</ion-content>
