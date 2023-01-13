@@ -29,5 +29,6 @@ export class ModalPage implements OnInit {
     // onWillDismiss() la alerta se dispara mucho más rápido (o antes) que con onDidDismiss(). 
     console.log('onDidDismiss')
     console.log(data);
+    console.log(JSON.stringify(data));
   }
 }
