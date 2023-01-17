@@ -28,7 +28,7 @@ export class ModalPage implements OnInit {
     //const { data } = await modal.onWillDismiss(); se dispara antes que se cierre el modal
     // onWillDismiss() la alerta se dispara mucho más rápido (o antes) que con onDidDismiss(). 
     console.log('onDidDismiss')
-    console.log(data);
+    console.log('Retorno del modal', data);
     console.log(JSON.stringify(data));
   }
 }
